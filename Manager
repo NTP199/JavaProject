@@ -1,0 +1,29 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Manager extends Employee{
+    private int travelDays;
+    private int newClients;
+
+    public Manager(String name, int birthDate, double monthlyIncome, double occupationRate, int travelDays, int newClients) {
+        super(name, birthDate, monthlyIncome, occupationRate);
+        this.travelDays = travelDays;
+        this.newClients = newClients;
+    }
+
+    public int getTravelDays() {
+        return travelDays;
+    }
+
+    public void setTravelDays(int travelDays) {
+        this.travelDays = travelDays;
+    }
+
+    public int getNewClients() {
+        return newClients;
+    }
+
+    public void setNewClients(int newClients) {
+        this.newClients = newClients;
+    }
+}
