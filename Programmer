@@ -1,0 +1,18 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class Programmer extends Employee{
+    private int completedProjects;
+
+    public Programmer(String name, int birthDate, double monthlyIncome, double occupationRate, int completedProjects) {
+        super(name, birthDate, monthlyIncome, occupationRate);
+        this.completedProjects = completedProjects;
+    }
+
+    public int getCompletedProjects() {
+        return completedProjects;
+    }
+
+    public void setCompletedProjects(int completedProjects) {
+        this.completedProjects = completedProjects;
+    }
+}
