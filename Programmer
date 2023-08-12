@@ -3,7 +3,7 @@ import java.util.Date;
 public class Programmer extends Employee{
     private int completedProjects;
 
-    public Programmer(String name, int birthDate, double monthlyIncome, double occupationRate, int completedProjects) {
+    public Programmer(String name, int birthDate, double monthlyIncome, int occupationRate, int completedProjects) {
         super(name, birthDate, monthlyIncome, occupationRate);
         this.completedProjects = completedProjects;
     }
