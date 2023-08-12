@@ -5,7 +5,7 @@ public class Manager extends Employee{
     private int travelDays;
     private int newClients;
 
-    public Manager(String name, int birthDate, double monthlyIncome, double occupationRate, int travelDays, int newClients) {
+    public Manager(String name, int birthDate, double monthlyIncome, int occupationRate, int travelDays, int newClients) {
         super(name, birthDate, monthlyIncome, occupationRate);
         this.travelDays = travelDays;
         this.newClients = newClients;
