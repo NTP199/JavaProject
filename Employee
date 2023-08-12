@@ -7,18 +7,31 @@ public class Employee  {
     protected int birthDate;
     protected int age;
     protected double monthlyIncome;
-    protected double occupationRate;
+    protected int occupationRate;
 
     public Employee(String name,
                     int birthDate,
                     double monthlyIncome,
-                    double occupationRate
+                    int occupationRate
     ) {
         this.name = name;
         this.birthDate = birthDate;
         this.age = LocalDate.now().getYear() - birthDate;
         this.monthlyIncome = monthlyIncome;
         this.occupationRate = occupationRate;
+
+    }
+    public Employee(String name,
+                    int birthDate,
+                    double monthlyIncome
+
+    ) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.age = LocalDate.now().getYear() - birthDate;
+        this.monthlyIncome = monthlyIncome;
+        this.occupationRate = 100;
+
     }
 
     public String getName() {
@@ -54,11 +67,27 @@ public class Employee  {
         this.monthlyIncome = monthlyIncome;
     }
 
-    public double getOccupationRate() {
+    public int getOccupationRate() {
         return occupationRate;
     }
 
-    public void setOccupationRate(double occupationRate) {
+    public void setOccupationRate(int occupationRate) {
         this.occupationRate = occupationRate;
+    }
+
+    public int validOccupation() {
+        if(occupationRate < 10){
+            occupationRate = 10;
+        }
+        else if(occupationRate > 100){
+            occupationRate = 100;
+        }
+        return occupationRate;
+    }
+
+    @Override
+    public String toString(){
+        String message = "We have a new employee: ";
+        return message;
     }
 }
