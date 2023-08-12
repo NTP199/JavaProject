@@ -1,0 +1,64 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.time.LocalDate;
+
+public class Employee  {
+    protected String name;
+    protected int birthDate;
+    protected int age;
+    protected double monthlyIncome;
+    protected double occupationRate;
+
+    public Employee(String name,
+                    int birthDate,
+                    double monthlyIncome,
+                    double occupationRate
+    ) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.age = LocalDate.now().getYear() - birthDate;
+        this.monthlyIncome = monthlyIncome;
+        this.occupationRate = occupationRate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public int getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(int birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getMonthlyIncome() {
+        return monthlyIncome;
+    }
+
+    public void setMonthlyIncome(double monthlyIncome) {
+        this.monthlyIncome = monthlyIncome;
+    }
+
+    public double getOccupationRate() {
+        return occupationRate;
+    }
+
+    public void setOccupationRate(double occupationRate) {
+        this.occupationRate = occupationRate;
+    }
+}
