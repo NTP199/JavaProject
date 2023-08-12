@@ -4,7 +4,7 @@ public class Tester extends Employee{
     private int solvedBugs;
 
 
-    public Tester(String name, int birthDate, double monthlyIncome, double occupationRate, int solvedBugs) {
+    public Tester(String name, int birthDate, double monthlyIncome, int occupationRate, int solvedBugs) {
         super(name, birthDate, monthlyIncome, occupationRate);
         this.solvedBugs = solvedBugs;
     }
